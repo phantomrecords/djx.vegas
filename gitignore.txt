@@ -1,0 +1,44 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor-specific hidden files
+.*.swp
+*.sublime-project
+*.sublime-workspace
+
+# Log files and debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+
+# PHP specific
+*.log
+*.cache
+*.tmp
+vendor/
+composer.lock
+
+# Node.js modules (optional future use)
+node_modules/
+
+# Media files (to avoid versioning large assets)
+media/*.mp4
+media/*.mp3
+media/*.gif
+
+# Windows system files
+ehthumbs.db
+Thumbs.db
+
+# Backup / temporary files
+*.bak
+*.tmp
+*.old
+*.orig
