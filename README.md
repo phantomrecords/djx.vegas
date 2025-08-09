@@ -14,7 +14,7 @@ See the current version at: https://djx.vegas
 
 ## 🚨 Legal Notice
 
-All code and design assets are copyright © 2015–2025 Michael Thomas Widener, II  
+All code and design assets are copyright © 2015–2025 Michael Thomas Widener, II.  
 Protected under U.S. law and international treaties.
 
 Unlawful use or duplication of this work, including partial mimicry or derivative works, is strictly prohibited and will be prosecuted.
