@@ -1,16 +1,15 @@
-# Michael II's – Widener Web Service
+# DJX Vegas
 
-You found my Wwb Service. From here, I make websites, software, animation, graphic designs, and anything that lives in a digital form. I work exclusively indoors, never outdoors, and I'm an expert. I look forward to working on your project. All projects follow best practices in technology service. All projects require a half-down payment to being and full payment before any digital work is available to transfer to the client's (your) possession. This is standard practice in technololgy / knowledge work, otherwise known as Intellectual Property Work, or Thought Work. There are no exceptions. We do not offer special rates for any reason. All rates are universal. All prices will eventually be listed. I believe in showing exactly what costs will be before beginning work.
+You found my new DJ website. From here, I make dope mixes, with dope drops, without any fanfare. Just find them, play them, reach out to me directly in the chat bot icon floating at the bottom right-hand side of any screen you use to view it. This page explains the site, click the link below, to https://djx.vegas/ to see the site. Chat anytime 24 / 7, the bot will leave a message for me anytime and I'll read it the next time I check messages. It saves them so don't worry about me missing it! I won't!
 
 ## 🌐 Live Preview
 
-See the current version at: https://widener.org
+See the current version at: https://djx.vegas
 
 ## 📁 Contents
 
-- `index.html` — Main portfolio page
+- `index.html` — Homepage
 - `styles.css` — Layout and animations
-- `game.js` — Rewritten interaction demo (Flash replacement)
 - `media/` — Embedded audio/video/image assets
 
 ## 🚨 Legal Notice
