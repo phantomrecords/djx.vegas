@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DJ "X" Mixtape Lyrics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+	:root {
+	  --bg: #04060a;
+	  --bg-alt: #0b0f18;
+	  --card: #101523;
+	  --border-soft: rgba(255, 255, 255, 0.06);
+	  --primary: #00f0ff;
+	  --primary-soft: rgba(0, 240, 255, 0.22);
+	  --accent: #ff3b7f;
+	  --text-main: #f7f7ff;
+	  --text-muted: #a4a9c4;
+	  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Helvetica, Arial, "Noto Sans", sans-serif;
+	  --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.7);
+	  --radius-large: 18px;
+	  --radius-pill: 999px;
+	  --nav-height: 64px;
+	  --max-width: 1080px;
+	}
+
+	* {
+	  box-sizing: border-box;
+	}
+
+	html,
+	body {
+	  margin: 0;
+	  padding: 0;
+	  background: radial-gradient(circle at top, #11172a 0, #04060a 55%, #020304 100%);
+	  color: var(--text-main);
+	  font-family: var(--font-sans);
+	  -webkit-font-smoothing: antialiased;
+	}
+
+	body {
+	  min-height: 100vh;
+	  display: flex;
+	  flex-direction: column;
+	}
+
+	a {
+	  color: var(--primary);
+	  text-decoration: none;
+	}
+
+	a:hover,
+	a:focus-visible {
+	  color: #8df8ff;
+	}
+
+	.site-shell {
+	  max-width: var(--max-width);
+	  margin: 0 auto;
+	  padding: 1.25rem 1.5rem 3rem;
+	}
+
+	/* HEADER / NAV */
+
+	.site-header {
+	  position: sticky;
+	  top: 0;
+	  z-index: 20;
+	  backdrop-filter: blur(18px);
+	  background: linear-gradient(
+		to right,
+		rgba(4, 6, 10, 0.98),
+		rgba(4, 6, 10, 0.94),
+		rgba(4, 6, 10, 0.98)
+	  );
+	  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+	}
+
+	.site-header-inner {
+	  max-width: var(--max-width);
+	  margin: 0 auto;
+	  padding: 0.55rem 1.5rem;
+	  display: flex;
+	  align-items: center;
+	  gap: 1.5rem;
+	}
+
+	.brand-lockup {
+	  display: flex;
+	  align-items: baseline;
+	  gap: 0.55rem;
+	  white-space: nowrap;
+	}
+
+	.brand-mark {
+	  font-size: 1.2rem;
+	  font-weight: 700;
+	  letter-spacing: 0.06em;
+	  text-transform: uppercase;
+	  padding: 0.3rem 0.7rem;
+	  border-radius: 999px;
+	  border: 1px solid rgba(255, 255, 255, 0.12);
+	  background: radial-gradient(circle at top, rgba(0, 240, 255, 0.28), transparent 60%);
+	  box-shadow: 0 0 12px rgba(0, 240, 255, 0.42);
+	}
+
+	.brand-subtitle {
+	  font-size: 0.8rem;
+	  text-transform: uppercase;
+	  color: var(--text-muted);
+	  letter-spacing: 0.15em;
+	}
+
+	/* NAV */
+
+	.nav-spacer {
+	  flex: 1;
+	}
+
+	.nav-main {
+	  display: flex;
+	  align-items: center;
+	  gap: 0.75rem;
+	  font-size: 0.9rem;
+	}
+
+	.nav-link {
+	  position: relative;
+	  padding: 0.4rem 0.8rem;
+	  border-radius: var(--radius-pill);
+	  color: var(--text-muted);
+	  text-transform: uppercase;
+	  letter-spacing: 0.12em;
+	  font-size: 0.75rem;
+	  overflow: hidden;
+	  transition:
+		color 160ms ease-out,
+		background 160ms ease-out,
+		transform 160ms ease-out,
+		box-shadow 160ms ease-out;
+	}
+
+	.nav-link::before {
+	  content: "";
+	  position: absolute;
+	  left: 10%;
+	  right: 90%;
+	  bottom: 0;
+	  height: 2px;
+	  background: linear-gradient(to right, var(--primary), var(--accent));
+	  opacity: 0;
+	  transform-origin: left;
+	  transition:
+		opacity 180ms ease-out,
+		right 220ms ease-out;
+	}
+
+	.nav-link:hover,
+	.nav-link:focus-visible {
+	  color: var(--text-main);
+	  background: radial-gradient(circle at top, rgba(0, 240, 255, 0.18), transparent 65%);
+	  transform: translateY(-1px);
+	  box-shadow: 0 0 12px rgba(0, 240, 255, 0.36);
+	}
+
+	.nav-link:hover::before,
+	.nav-link:focus-visible::before {
+	  opacity: 1;
+	  right: 10%;
+	}
+
+	.nav-link--primary {
+	  border: 1px solid var(--primary);
+	  background: radial-gradient(circle at top, rgba(0, 240, 255, 0.25), transparent 70%);
+	  color: var(--text-main);
+	  box-shadow: 0 0 16px rgba(0, 240, 255, 0.45);
+	}
+
+	.nav-link--primary::before {
+	  display: none;
+	}
+
+	/* MOBILE NAV TOGGLER */
+
+	.nav-toggle {
+	  display: none;
+	}
+
+	.nav-toggle-label {
+	  display: none;
+	  cursor: pointer;
+	  padding: 0.35rem 0.5rem;
+	  border-radius: var(--radius-pill);
+	  border: 1px solid rgba(255, 255, 255, 0.28);
+	}
+
+	.nav-toggle-label span {
+	  display: block;
+	  width: 18px;
+	  height: 2px;
+	  margin: 4px 0;
+	  background: #ffffff;
+	  border-radius: 999px;
+	  transition: transform 160ms ease-out, opacity 160ms ease-out;
+	}
+
+	@media (max-width: 768px) {
+	  .site-header-inner {
+		padding-inline: 1rem;
+	  }
+
+	  .nav-main {
+		position: fixed;
+		inset: var(--nav-height) 0 auto 0;
+		background: rgba(4, 6, 10, 0.98);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+		padding: 0.75rem 1.25rem 1rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.35rem;
+		transform: translateY(-100%);
+		opacity: 0;
+		pointer-events: none;
+		transition: transform 200ms ease-out, opacity 160ms ease-out;
+	  }
+
+	  .nav-link {
+		width: 100%;
+	  }
+
+	  .nav-toggle-label {
+		display: inline-flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	  }
+
+	  .nav-toggle:checked ~ .nav-main {
+		transform: translateY(0);
+		opacity: 1;
+		pointer-events: auto;
+	  }
+
+	  .nav-toggle:checked + .nav-toggle-label span:nth-child(1) {
+		transform: translateY(6px) rotate(45deg);
+	  }
+
+	  .nav-toggle:checked + .nav-toggle-label span:nth-child(2) {
+		opacity: 0;
+	  }
+
+	  .nav-toggle:checked + .nav-toggle-label span:nth-child(3) {
+		transform: translateY(-6px) rotate(-45deg);
+	  }
+
+	  .nav-spacer {
+		display: none;
+	  }
+	}
+
+	/* MAIN LAYOUT */
+
+	main {
+	  flex: 1;
+	}
+
+	.hero {
+	  margin-top: 1.8rem;
+	  margin-bottom: 1.6rem;
+	  padding: 1.6rem 1.4rem;
+	  border-radius: var(--radius-large);
+	  background: radial-gradient(circle at top left, rgba(0, 240, 255, 0.18), transparent 60%),
+		radial-gradient(circle at bottom right, rgba(255, 59, 127, 0.22), transparent 65%),
+		var(--bg-alt);
+	  box-shadow: var(--shadow-soft);
+	  border: 1px solid var(--border-soft);
+	  position: relative;
+	  overflow: hidden;
+	}
+
+	.hero::after {
+	  content: "TEXT MODE";
+	  position: absolute;
+	  right: -3rem;
+	  top: -0.5rem;
+	  font-size: 0.6rem;
+	  letter-spacing: 0.24em;
+	  text-transform: uppercase;
+	  color: rgba(255, 255, 255, 0.25);
+	  transform: rotate(15deg);
+	}
+
+	.hero-kicker {
+	  font-size: 0.75rem;
+	  text-transform: uppercase;
+	  letter-spacing: 0.18em;
+	  color: var(--text-muted);
+	  margin-bottom: 0.5rem;
+	}
+
+	.hero-title {
+	  font-size: clamp(1.8rem, 2.4vw + 1.3rem, 2.4rem);
+	  line-height: 1.15;
+	  margin: 0 0 0.65rem;
+	}
+
+	.hero-title span {
+	  background: linear-gradient(120deg, var(--primary), var(--accent));
+	  -webkit-background-clip: text;
+	  color: transparent;
+	}
+
+	.hero-body {
+	  color: var(--text-muted);
+	  font-size: 0.98rem;
+	  max-width: 48rem;
+	}
+
+	.hero-body strong {
+	  color: var(--text-main);
+	}
+
+	/* CONTENT AREA */
+
+	.content-layout {
+	  display: grid;
+	  grid-template-columns: minmax(0, 2.1fr) minmax(0, 1fr);
+	  gap: 1.5rem;
+	  align-items: flex-start;
+	}
+
+@media (max-width: 900px) {
+	  .content-layout {
+		grid-template-columns: minmax(0, 1fr);
+	  }
+	
+	  /* Reorder for mobile: TOC (sidebar) first, article second */
+	  .content-sidebar {
+		order: 1;
+	  }
+	
+	  .content-article {
+		order: 2;
+	  }
+	}
+
+
+	.content-article,
+	.content-sidebar {
+	  background: var(--card);
+	  border-radius: var(--radius-large);
+	  border: 1px solid var(--border-soft);
+	  box-shadow: var(--shadow-soft);
+	  padding: 1.6rem 1.5rem 1.7rem;
+	}
+
+	.content-article h2 {
+	  margin-top: 0;
+	  font-size: 1.25rem;
+	  letter-spacing: 0.04em;
+	  text-transform: uppercase;
+	  padding-bottom: 0.5rem;
+	  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+	}
+
+	.content-article h3 {
+	  margin-top: 1.5rem;
+	  font-size: 1.05rem;
+	}
+
+	.content-article p {
+	  line-height: 1.7;
+	  font-size: 0.96rem;
+	  color: var(--text-muted);
+	  margin: 0.3rem 0 0.9rem;
+	}
+
+	.content-article ul {
+	  padding-left: 1.2rem;
+	  margin: 0.3rem 0 0.9rem;
+	  color: var(--text-muted);
+	  font-size: 0.95rem;
+	}
+
+	.content-article li + li {
+	  margin-top: 0.15rem;
+	}
+
+	.callout-tag {
+	  display: inline-flex;
+	  align-items: center;
+	  gap: 0.4rem;
+	  padding: 0.16rem 0.6rem;
+	  border-radius: var(--radius-pill);
+	  background: rgba(0, 240, 255, 0.12);
+	  color: var(--primary);
+	  font-size: 0.72rem;
+	  text-transform: uppercase;
+	  letter-spacing: 0.16em;
+	  margin-bottom: 0.8rem;
+	}
+
+	.content-sidebar h2 {
+	  margin-top: 0;
+	  font-size: 0.95rem;
+	  text-transform: uppercase;
+	  letter-spacing: 0.16em;
+	  color: var(--text-muted);
+	  padding-bottom: 0.45rem;
+	  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+	}
+
+	.toc-list {
+	  list-style: none;
+	  padding: 0;
+	  margin: 0.5rem 0 0;
+	  font-size: 0.9rem;
+	}
+
+	.toc-item + .toc-item {
+	  margin-top: 0.3rem;
+	}
+
+	.toc-link {
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	  padding: 0.45rem 0.5rem;
+	  border-radius: var(--radius-pill);
+	  background: rgba(255, 255, 255, 0.01);
+	  color: var(--text-muted);
+	  transition:
+		background 160ms ease-out,
+		color 160ms ease-out,
+		transform 160ms ease-out,
+		box-shadow 160ms ease-out;
+	}
+
+	.toc-link span:last-child {
+	  font-size: 0.7rem;
+	  text-transform: uppercase;
+	  letter-spacing: 0.12em;
+	  opacity: 0.7;
+	}
+
+	.toc-link:hover,
+	.toc-link:focus-visible {
+	  color: var(--text-main);
+	  background: radial-gradient(circle at left, rgba(0, 240, 255, 0.2), transparent 70%);
+	  transform: translateY(-1px);
+	  box-shadow: 0 0 12px rgba(0, 240, 255, 0.38);
+	}
+
+	.sidebar-note {
+	  margin-top: 1.1rem;
+	  padding: 0.7rem 0.9rem;
+	  border-radius: 0.75rem;
+	  background: rgba(0, 0, 0, 0.35);
+	  border: 1px dashed rgba(255, 255, 255, 0.18);
+	  font-size: 0.78rem;
+	  color: var(--text-muted);
+	  line-height: 1.5;
+	}
+
+	/* FOOTER */
+
+	footer {
+	  border-top: 1px solid rgba(255, 255, 255, 0.08);
+	  margin-top: 2.5rem;
+	  padding: 1.5rem 1.5rem 2.5rem;
+	  font-size: 0.8rem;
+	  color: var(--text-muted);
+	  background: radial-gradient(circle at top, rgba(0, 240, 255, 0.12), transparent 70%);
+	}
+
+	.footer-inner {
+	  max-width: var(--max-width);
+	  margin: 0 auto;
+	  display: flex;
+	  flex-wrap: wrap;
+	  gap: 0.75rem;
+	  justify-content: space-between;
+	  align-items: center;
+	}
+
+	.footer-inner span {
+	  opacity: 0.85;
+	}
+
+	.footer-nav {
+	  display: flex;
+	  flex-wrap: wrap;
+	  gap: 0.75rem;
+	}
+
+	.footer-link {
+	  font-size: 0.78rem;
+	  text-transform: uppercase;
+	  letter-spacing: 0.12em;
+	  color: var(--text-muted);
+	}
+
+	.footer-link:hover,
+	.footer-link:focus-visible {
+	  color: var(--primary);
+	}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+	<div class="site-header-inner">
+	  <div class="brand-lockup">
+		<div class="brand-mark">DJ "X"</div>
+		<div class="brand-subtitle">DJ Mix'd Diaries</div>
+	  </div>
+
+	  <div class="nav-spacer"></div>
+
+	  <!-- Mobile nav checkbox -->
+	  <input id="nav-toggle" class="nav-toggle" type="checkbox" />
+	  <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+		<span></span>
+		<span></span>
+		<span></span>
+	  </label>
+
+	  <nav class="nav-main" aria-label="Primary navigation">
+		
+		<a class="nav-link" href="javascript:history.go(-1);">Back</a>
+		
+		<a class="nav-link nav-link--primary" href="#top">Home</a>
+		<a class="nav-link" href="javascript:history.go(-1);">Forward</a>
+		<!-- <a class="nav-link" href="#section-intro">Lyrics</a> -->
+		<a class="nav-link" target="_self" href="https://djx.vegas/">DJX.Vegas</a>
+		<a class="nav-link" target="_self" href="https://michaelwidener.com/portfolio/">Portfolio</a>
+	  </nav>
+	</div>
+  </header>
+
+  <div class="site-shell">
+	<main id="top">
+	  <section class="hero">
+		<div class="hero-kicker">DJ-experience® music journals for men.</div>
+		<h1 class="hero-title">
+		  You found this <span>Original Idea from DJ-experience®</span>: DJ-Mix'd Playlists for Men based on real-life, not virtual, romances.
+		</h1>
+		<p class="hero-body">
+		  We live it everyday now. Romance scammers lying to us, especially men, targeted for our money. They contact us using an unlimited number of angles, and law enforcement does nothing about it. We have to bear the burden oursevles and no one has time for that. So now, this page will chronicle the scammers that targeted DJ-experience® and thought they got away with it. I'll name names, chronicle the facts, and tell the story set to music. A DJ is an incredible force to reckon with. Find out just how powerful we are when we set our sites on scammers stealing our light, especially made for men, their targets, and especially harmful because law enforcements blames a man, biasely and takes the woman's side even if the woman is a man pretending to be a woman. They never care. So let's <strong>take the fight to the scammers</strong> and name names. Make this New Year <strong>the end of</strong> free romance scamming against Men!
+		</p>
+	  </section>
+
+	  <section class="content-layout">
+		<article class="content-article">
+		  <div class="callout-tag">December 2025 • Romance Diary</div>
+		  <h2 id="section-intro">© 2025 12 💘 — I Lied (Fifth Harmony) DJ-Mix'd Playlist</h2>
+		  <p>
+<iframe style="background-color:white; height:450px;width:600px;max-width:600px;overflow:hidden;border-radius:20px;" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450"  sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/what-they-say-zara-larsson-dj-mix-playlist/pl.u-NB07u5zlMk"></iframe>
+		  </p>
+
+		  <h3 id="section-cases">Track 1: I Lied (Fifth Harmony)</h3>
+			<p>
+				
+			It's crazy how that four letter word gets tossed<br/>
+			And I'm guilty, said it so many times before<br/>
+			But I can't front no more<br/>
+			You're the only one that's showing me the real<br/>
+			You're the only one that's giving me these chills<br/>
+			No ex in the past could open up my eyes<br/>
+			Thought I found the one every time<br/>
+			I said I love you, but I lied<br/>
+			'Cause love never got me this high<br/>
+			I said I love you, but I lied<br/>
+			'Cause everything's different this time, oh no<br/>
+			I said I love you, but I lied<br/>
+			'Cause love never got me this high<br/>
+			It'd be foolish<br/>
+			If they thought they could get me back (Oh, no, no yeah)<br/>
+			See, the truth is (The truth is)<br/>
+			You can't lose what you never had<br/>
+			And you got me so bad<br/>
+			You're the only one that's showing me the real (Showing me the real)<br/>
+			You're the only one that's giving me these chills (Giving me these chills)<br/>
+			No ex in the past could open up my eyes<br/>
+			Thought I found the one every time<br/>
+			I said I love you, but I lied<br/>
+			'Cause love never got me this high<br/>
+			I said I love you, but I lied<br/>
+			'Cause everything's different this time, oh no<br/>
+			I said I love you, but I lied<br/>
+			'Cause love never got me this high<br/>
+			You got that real love<br/>
+			That text in the morning, that real love<br/>
+			How Mary J call it, that real love<br/>
+			We got real love<br/>
+			You got that real love<br/>
+			That text in the morning, that real love<br/>
+			How Mary J call it, that real love<br/>
+			We got real love<br/>
+			I said I love you, but I lied<br/>
+			'Cause love never got me this high<br/>
+			I said I love you, but I lied<br/>
+			'Cause love never got me this high<br/>
+			(You got my love, talking 'bout real love)<br/>
+			I said I love you, but I lied<br/>
+			'Cause love never got me this high<br/>
+			You got that real love<br/>
+			That text in the morning, that real love<br/>
+			How Mary J call it, that real love<br/>
+			We got real love<br/>
+			You got that real love<br/>
+			That text in the morning, that real love<br/>
+			How Mary J call it, that real love<br/>
+			We got real love<br/>
+			
+			Source: <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.musixmatch.com/pro/&ved=2ahUKEwi-zJaRo6SRAxXWMUQIHfOHIFAQ5s4FegQIGBAC&usg=AOvVaw2iOjkf23Y92QmcxtkeDqzu">Musixmatch</a>
+		  </p>
+
+		  <h3 id="section-process">Track 2: All the Time (Zara Larsson)</h3>
+		  <p>
+		  
+		  Lyrics<br/>
+		  <br/>
+		  From the breaking of the day to the middle of the night<br/>
+		  (From the breaking of the day to the middle of the night)<br/>
+		  (From the breaking of the day to the middle of the night)<br/>
+		  (From the breaking of the day to the middle of the night)<br/>
+		  Summertime and I'm caught in the feeling<br/>
+		  <br/>
+		  Getting high and I'm up on the ceiling<br/>
+		  I don't know what you're doing in New York<br/>
+		  All I know is you ain't on my bedroom floor<br/>
+		  I'm seeing you undressed in my room<br/>
+		  But it's just a memory, a fantasy<br/>
+		  Are you in your house? Are you going out?<br/>
+		  Are you going crazy like me?<br/>
+		  From the breaking of the day to the middle of the night<br/>
+		  <br/>
+		  I try to forget about you, baby<br/>
+		  And I die when I think of you with someone else<br/>
+		  And I don't know why<br/>
+		  I don't know why you're dancing in my mind<br/>
+		  From the breaking of the day to the middle of the night, all the time<br/>
+		  From the breaking of the day to the middle of the night, all the time<br/>
+		  Everyone's been wearing your perfume<br/>
+		  Everything is reminding me of you<br/>
+		  <br/>
+		  I don't know what I'm doing in New York<br/>
+		  But all I know is you ain't walking through that door<br/>
+		  I'm seeing you undressed in my room<br/>
+		  But it's just a memory, a fantasy<br/>
+		  Are you in your house? Are you going out?<br/>
+		  Are you going crazy like me?<br/>
+		  From the breaking of the day to the middle of the night<br/>
+		  I try to forget about you, baby<br/>
+		  <br/>
+		  And I die when I think of you with someone else<br/>
+		  And I don't know why<br/>
+		  I don't know why you're dancing in my mind<br/>
+		  From the breaking of the day to the middle of the night<br/>
+		  I try to forget about you, baby<br/>
+		  And I die when I think of you with someone else<br/>
+		  And I don't know why<br/>
+		  I don't know why you're dancing in my mind<br/>
+		  From the breaking of the day to the middle of the night (yeah)<br/>
+		  And I wonder if you think about me too<br/>
+		  Where we used to go, what we used to do<br/>
+		  <br/>
+		  And I wonder if you're crying out inside, oh, yeah, yeah<br/>
+		  From the breaking of the day to the middle of the night<br/>
+		  I try to forget about you, baby<br/>
+		  And I die when I think of you with someone else<br/>
+		  And I don't know why<br/>
+		  I don't know why you're dancing in my mind<br/>
+		  From the breaking of the day to the middle of the night<br/>
+		  I try to forget about you, baby<br/>
+		  And I die when I think of you with someone else<br/>
+		  And I don't know why<br/>
+		  <br/>
+		  I don't know why you're dancing in my mind<br/>
+		  From the breaking of the day to the middle of the night, all the time<br/>
+		  From the breaking of the day to the middle of the night, all the time<br/>
+		  From the breaking of the day to the middle of the night<br/>
+		  <br/>
+		  <strong>Writer(s):</strong> Zara Larsson, Ilsey Juber, Linus Wiklund, Noonie Bao. <strong>Lyrics Source:</strong> MusixMatch
+		  </p>
+
+
+		  <h3 id="section-contact">Track 3: Never Be the Same (Camila Cabello)</h3>
+		  <p>
+			Lyrics<br/>
+			<br/>
+			<strong>verse</strong><br/>
+			Something must′ve gone wrong in my brain<br/>
+			Got your chemicals all in my veins<br/>
+			Feeling all the highs, feeling all the pain<br/>
+			Let go on the wheel, it's the bullet lane<br/>
+			Now I′m seeing red, not thinking straight<br/>
+			Blurring all the lines, you intoxicate me<br/>
+			<br/>
+			<strong>pre-chorus</strong><br/>
+			Just like nicotine, heroin, morphine<br/>
+			Suddenly, I'm a fiend and you're all I need<br/>
+			All I need<br/>
+			Yeah, you′re all I need<br/>
+			<br/>
+			<strong>chorus</strong><br/>
+			It′s you, babe<br/>
+			And I'm a sucker for the way that you move, babe<br/>
+			And I could try to run, but it would be useless<br/>
+			You′re to blame<br/>
+			Just one hit of you, I knew I'll never be the same<br/>
+			It′s you, babe<br/>
+			And I'm a sucker for the way that you move, babe<br/>
+			And I could try to run, but it would be useless<br/>
+			You′re to blame<br/>
+			Just one hit of you, I knew I'll never, ever, ever be the same<br/>
+			<br/>
+			<strong>hook</strong><br/>
+			I'll never be the same<br/>
+			I′ll never be the same<br/>
+			I′ll never be the same<br/>
+			<br/>
+			<strong>verse</strong><br/>
+			Sneaking in L.A. when the lights are low<br/>
+			Off of one touch, I could overdose<br/>
+			You said, "Stop playing it safe, girl"<br/>
+			"I wanna see you lose control"<br/>
+			<br/>
+			<strong>pre-chorus</strong><br/>
+			Just like nicotine, heroin, morphine<br/>
+			Suddenly, I'm a fiend and you′re all I need<br/>
+			All I need<br/>
+			Yeah, you're all I need<br/>
+			<br/>
+			<strong>chorus</strong><br/>
+			It′s you, babe<br/>
+			And I'm a sucker for the way that you move, babe<br/>
+			And I could try to run, but it would be useless<br/>
+			You′re to blame<br/>
+			Just one hit of you, I knew I'll never be the same<br/>
+			It's you, babe<br/>
+			And I′m a sucker for the way that you move, babe<br/>
+			And I could try to run, but it would be useless<br/>
+			You′re to blame<br/>
+			Just one hit of you, I knew I'll never, ever, ever be the same<br/>
+			<br/>
+			<strong>hook</strong><br/>
+			I′ll never be the same<br/>
+			I'll never be the same<br/>
+			I′ll never be the same<br/>
+			<br/>
+			<strong>bridge</strong><br/>
+			You're in my blood<br/>
+			You′re in my veins<br/>
+			You're in my head (I blame)<br/>
+			You're in my blood<br/>
+			You′re in my veins<br/>
+			You′re in my head (I'm sayin′)<br/>
+			<br/>
+			<strong>ending chorus</strong><br/>
+			I'm saying it′s you, babe<br/>
+			And I'm a sucker for the way that you move, babe<br/>
+			And I could try to run, but it would be useless<br/>
+			You′re to blame (You're to blame)<br/>
+			Just one hit of you, I knew I'll never be the same<br/>
+			It′s you, babe<br/>
+			And I′m a sucker for the way that you move, babe<br/>
+			And I could try to run, but it would be useless<br/>
+			You're to blame<br/>
+			Just one hit of you, I knew I′ll never, ever, ever be the same<br/>
+			<br/>
+			<strong>credits</strong><br/>
+			<strong>Writer(s):</strong> Noonie Bao, Jacob Ludwig Olofsson, Rami Dawod, Adam King Feeney, Camila Cabello, Sasha Sloan. <strong>Lyrics Source:</strong> <a href="https://www.musixmatch.com/lyrics/51613604/78979552">MusixMatch</a>
+		  </p>
+		</article>
+
+		<aside class="content-sidebar">
+		  <h2>On This Page</h2>
+		  <ul class="toc-list">
+			<li class="toc-item">
+			  <a class="toc-link" href="#section-intro">
+				<span>1. This Month's Introduction.</span>
+				<span>01</span>
+			  </a>
+			</li>
+			<li class="toc-item">
+			  <a class="toc-link" href="#section-cases">
+				<span>2. The DJ's Diary: Dec. 2025.</span>
+				<span>02</span>
+			  </a>
+			</li>
+			<li class="toc-item">
+			  <a class="toc-link" href="#section-process">
+				<span>3. Credits / Collabs.</span>
+				<span>03</span>
+			  </a>
+			</li>
+
+		  </ul>
+
+		  <div class="sidebar-note">
+			Why this is here: Tables of Contents and Index pages are a dying art. When you visit a page, full of text, it's easy to get lost. When you return, it's better if you can go straight to where you were. But you need something to jog your memory. That's where Tables of Contents and Index sections shine. This page is too small for an Index, but a Table of Contents fits in nicely.
+		  </div>
+		</aside>
+	  </section>
+	</main>
+  </div>
+
+	<footer>
+	  <div class="footer-inner">
+		<span>© <span id="year"></span>. This is a DJ-experience®-created, Original Work of Art. <br/>Call DJ "X" ( <a href="tel:510.859.7725">510.859.7725</a> ) and leave a  voicemail of your story for a chance to be featured here.</span>
+		<div class="footer-nav">
+		  <a class="footer-link" href="#top">Page-Top</a>
+		  <a class="footer-link" href="https://djx.vegas/" target="_self" rel="noreferrer"
+			>DJX.vegas</a
+		  >
+		  <a class="footer-link" href="https://michaelwidener.com/portfolio/" target="_self" rel="noreferrer"
+			>Portfolio</a
+		  >
+		</div>
+	  </div>
+	</footer>
+
+	<script>
+	  // Simple, GitHub-safe enhancement: current year in footer.
+	  document.getElementById("year").textContent = new Date().getFullYear();
+	</script>
+</body>
+</html>
