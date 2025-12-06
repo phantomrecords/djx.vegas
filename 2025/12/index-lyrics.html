@@ -333,6 +333,15 @@
 	  .content-layout {
 		grid-template-columns: minmax(0, 1fr);
 	  }
+	
+	  /* Reorder for mobile: TOC (sidebar) first, article second */
+	  .content-sidebar {
+		order: 1;
+	  }
+	
+	  .content-article {
+		order: 2;
+	  }
 	}
 
 	.content-article,
@@ -452,6 +461,55 @@
 	  line-height: 1.5;
 	}
 
+	/* LYRICS STYLING */
+
+	.lyrics-block {
+	  margin-top: 0.9rem;
+	  margin-bottom: 1.5rem;
+	  padding: 1.1rem 1.1rem 1rem;
+	  border-radius: 1rem;
+	  background:
+		radial-gradient(circle at top left, rgba(0, 240, 255, 0.18), transparent 55%),
+		radial-gradient(circle at bottom right, rgba(255, 59, 127, 0.14), transparent 60%),
+		rgba(5, 8, 18, 0.95);
+	  border: 1px solid rgba(255, 255, 255, 0.16);
+	  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.7);
+	  line-height: 1.8;
+	  font-size: 0.95rem;
+	}
+
+	.lyrics-block p {
+	  margin: 0.25rem 0;
+	  color: var(--text-main);
+	}
+
+	.lyrics-heading {
+	  font-size: 0.75rem;
+	  text-transform: uppercase;
+	  letter-spacing: 0.22em;
+	  color: var(--text-muted);
+	  margin-bottom: 0.6rem;
+	}
+
+	.lyrics-section-label {
+	  display: inline-block;
+	  margin: 0.55rem 0 0.25rem;
+	  padding: 0.12rem 0.7rem;
+	  border-radius: var(--radius-pill);
+	  border: 1px solid rgba(255, 255, 255, 0.18);
+	  background: rgba(0, 0, 0, 0.45);
+	  font-size: 0.7rem;
+	  text-transform: uppercase;
+	  letter-spacing: 0.18em;
+	  color: var(--accent);
+	}
+
+	.lyrics-source {
+	  margin-top: 0.7rem;
+	  font-size: 0.78rem;
+	  color: var(--text-muted);
+	}
+
 	/* FOOTER */
 
 	footer {
@@ -544,276 +602,14 @@
 		  <div class="callout-tag">December 2025 • Romance Diary</div>
 		  <h2 id="section-intro">© 2025 12 💘 — I Lied (Fifth Harmony) DJ-Mix'd Playlist</h2>
 		  <p>
-<iframe style="background-color:white; height:450px;width:600px;max-width:600px;overflow:hidden;border-radius:20px;" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450"  sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/what-they-say-zara-larsson-dj-mix-playlist/pl.u-NB07u5zlMk"></iframe>
+<iframe style="background-color:white; height:450px;width:600px;max-width:600px;overflow:hidden;border-radius:20px;" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450"  sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/pl aylist/what-they-say-zara-larsson-dj-mix-playlist/pl.u-NB07u5zlMk"></iframe>
 		  </p>
 
 		  <h3 id="section-cases">Track 1: I Lied (Fifth Harmony)</h3>
+		  <div class="lyrics-block">
+			<div class="lyrics-heading">Lyrics</div>
 			<p>
-				
-			It's crazy how that four letter word gets tossed<br/>
-			And I'm guilty, said it so many times before<br/>
-			But I can't front no more<br/>
-			You're the only one that's showing me the real<br/>
-			You're the only one that's giving me these chills<br/>
-			No ex in the past could open up my eyes<br/>
-			Thought I found the one every time<br/>
-			I said I love you, but I lied<br/>
-			'Cause love never got me this high<br/>
-			I said I love you, but I lied<br/>
-			'Cause everything's different this time, oh no<br/>
-			I said I love you, but I lied<br/>
-			'Cause love never got me this high<br/>
-			It'd be foolish<br/>
-			If they thought they could get me back (Oh, no, no yeah)<br/>
-			See, the truth is (The truth is)<br/>
-			You can't lose what you never had<br/>
-			And you got me so bad<br/>
-			You're the only one that's showing me the real (Showing me the real)<br/>
-			You're the only one that's giving me these chills (Giving me these chills)<br/>
-			No ex in the past could open up my eyes<br/>
-			Thought I found the one every time<br/>
-			I said I love you, but I lied<br/>
-			'Cause love never got me this high<br/>
-			I said I love you, but I lied<br/>
-			'Cause everything's different this time, oh no<br/>
-			I said I love you, but I lied<br/>
-			'Cause love never got me this high<br/>
-			You got that real love<br/>
-			That text in the morning, that real love<br/>
-			How Mary J call it, that real love<br/>
-			We got real love<br/>
-			You got that real love<br/>
-			That text in the morning, that real love<br/>
-			How Mary J call it, that real love<br/>
-			We got real love<br/>
-			I said I love you, but I lied<br/>
-			'Cause love never got me this high<br/>
-			I said I love you, but I lied<br/>
-			'Cause love never got me this high<br/>
-			(You got my love, talking 'bout real love)<br/>
-			I said I love you, but I lied<br/>
-			'Cause love never got me this high<br/>
-			You got that real love<br/>
-			That text in the morning, that real love<br/>
-			How Mary J call it, that real love<br/>
-			We got real love<br/>
-			You got that real love<br/>
-			That text in the morning, that real love<br/>
-			How Mary J call it, that real love<br/>
-			We got real love<br/>
-			
-			Source: <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.musixmatch.com/pro/&ved=2ahUKEwi-zJaRo6SRAxXWMUQIHfOHIFAQ5s4FegQIGBAC&usg=AOvVaw2iOjkf23Y92QmcxtkeDqzu">Musixmatch</a>
-		  </p>
-
-		  <h3 id="section-process">Track 2: All the Time (Zara Larsson)</h3>
-		  <p>
-		  
-		  Lyrics<br/>
-		  <br/>
-		  From the breaking of the day to the middle of the night<br/>
-		  (From the breaking of the day to the middle of the night)<br/>
-		  (From the breaking of the day to the middle of the night)<br/>
-		  (From the breaking of the day to the middle of the night)<br/>
-		  Summertime and I'm caught in the feeling<br/>
-		  <br/>
-		  Getting high and I'm up on the ceiling<br/>
-		  I don't know what you're doing in New York<br/>
-		  All I know is you ain't on my bedroom floor<br/>
-		  I'm seeing you undressed in my room<br/>
-		  But it's just a memory, a fantasy<br/>
-		  Are you in your house? Are you going out?<br/>
-		  Are you going crazy like me?<br/>
-		  From the breaking of the day to the middle of the night<br/>
-		  <br/>
-		  I try to forget about you, baby<br/>
-		  And I die when I think of you with someone else<br/>
-		  And I don't know why<br/>
-		  I don't know why you're dancing in my mind<br/>
-		  From the breaking of the day to the middle of the night, all the time<br/>
-		  From the breaking of the day to the middle of the night, all the time<br/>
-		  Everyone's been wearing your perfume<br/>
-		  Everything is reminding me of you<br/>
-		  <br/>
-		  I don't know what I'm doing in New York<br/>
-		  But all I know is you ain't walking through that door<br/>
-		  I'm seeing you undressed in my room<br/>
-		  But it's just a memory, a fantasy<br/>
-		  Are you in your house? Are you going out?<br/>
-		  Are you going crazy like me?<br/>
-		  From the breaking of the day to the middle of the night<br/>
-		  I try to forget about you, baby<br/>
-		  <br/>
-		  And I die when I think of you with someone else<br/>
-		  And I don't know why<br/>
-		  I don't know why you're dancing in my mind<br/>
-		  From the breaking of the day to the middle of the night<br/>
-		  I try to forget about you, baby<br/>
-		  And I die when I think of you with someone else<br/>
-		  And I don't know why<br/>
-		  I don't know why you're dancing in my mind<br/>
-		  From the breaking of the day to the middle of the night (yeah)<br/>
-		  And I wonder if you think about me too<br/>
-		  Where we used to go, what we used to do<br/>
-		  <br/>
-		  And I wonder if you're crying out inside, oh, yeah, yeah<br/>
-		  From the breaking of the day to the middle of the night<br/>
-		  I try to forget about you, baby<br/>
-		  And I die when I think of you with someone else<br/>
-		  And I don't know why<br/>
-		  I don't know why you're dancing in my mind<br/>
-		  From the breaking of the day to the middle of the night<br/>
-		  I try to forget about you, baby<br/>
-		  And I die when I think of you with someone else<br/>
-		  And I don't know why<br/>
-		  <br/>
-		  I don't know why you're dancing in my mind<br/>
-		  From the breaking of the day to the middle of the night, all the time<br/>
-		  From the breaking of the day to the middle of the night, all the time<br/>
-		  From the breaking of the day to the middle of the night<br/>
-		  <br/>
-		  <strong>Writer(s):</strong> Zara Larsson, Ilsey Juber, Linus Wiklund, Noonie Bao. <strong>Lyrics Source:</strong> MusixMatch
-		  </p>
-
-
-		  <h3 id="section-contact">Track 3: Never Be the Same (Camila Cabello)</h3>
-		  <p>
-			Lyrics<br/>
-			<br/>
-			<strong>verse</strong><br/>
-			Something must′ve gone wrong in my brain<br/>
-			Got your chemicals all in my veins<br/>
-			Feeling all the highs, feeling all the pain<br/>
-			Let go on the wheel, it's the bullet lane<br/>
-			Now I′m seeing red, not thinking straight<br/>
-			Blurring all the lines, you intoxicate me<br/>
-			<br/>
-			<strong>pre-chorus</strong><br/>
-			Just like nicotine, heroin, morphine<br/>
-			Suddenly, I'm a fiend and you're all I need<br/>
-			All I need<br/>
-			Yeah, you′re all I need<br/>
-			<br/>
-			<strong>chorus</strong><br/>
-			It′s you, babe<br/>
-			And I'm a sucker for the way that you move, babe<br/>
-			And I could try to run, but it would be useless<br/>
-			You′re to blame<br/>
-			Just one hit of you, I knew I'll never be the same<br/>
-			It′s you, babe<br/>
-			And I'm a sucker for the way that you move, babe<br/>
-			And I could try to run, but it would be useless<br/>
-			You′re to blame<br/>
-			Just one hit of you, I knew I'll never, ever, ever be the same<br/>
-			<br/>
-			<strong>hook</strong><br/>
-			I'll never be the same<br/>
-			I′ll never be the same<br/>
-			I′ll never be the same<br/>
-			<br/>
-			<strong>verse</strong><br/>
-			Sneaking in L.A. when the lights are low<br/>
-			Off of one touch, I could overdose<br/>
-			You said, "Stop playing it safe, girl"<br/>
-			"I wanna see you lose control"<br/>
-			<br/>
-			<strong>pre-chorus</strong><br/>
-			Just like nicotine, heroin, morphine<br/>
-			Suddenly, I'm a fiend and you′re all I need<br/>
-			All I need<br/>
-			Yeah, you're all I need<br/>
-			<br/>
-			<strong>chorus</strong><br/>
-			It′s you, babe<br/>
-			And I'm a sucker for the way that you move, babe<br/>
-			And I could try to run, but it would be useless<br/>
-			You′re to blame<br/>
-			Just one hit of you, I knew I'll never be the same<br/>
-			It's you, babe<br/>
-			And I′m a sucker for the way that you move, babe<br/>
-			And I could try to run, but it would be useless<br/>
-			You′re to blame<br/>
-			Just one hit of you, I knew I'll never, ever, ever be the same<br/>
-			<br/>
-			<strong>hook</strong><br/>
-			I′ll never be the same<br/>
-			I'll never be the same<br/>
-			I′ll never be the same<br/>
-			<br/>
-			<strong>bridge</strong><br/>
-			You're in my blood<br/>
-			You′re in my veins<br/>
-			You're in my head (I blame)<br/>
-			You're in my blood<br/>
-			You′re in my veins<br/>
-			You′re in my head (I'm sayin′)<br/>
-			<br/>
-			<strong>ending chorus</strong><br/>
-			I'm saying it′s you, babe<br/>
-			And I'm a sucker for the way that you move, babe<br/>
-			And I could try to run, but it would be useless<br/>
-			You′re to blame (You're to blame)<br/>
-			Just one hit of you, I knew I'll never be the same<br/>
-			It′s you, babe<br/>
-			And I′m a sucker for the way that you move, babe<br/>
-			And I could try to run, but it would be useless<br/>
-			You're to blame<br/>
-			Just one hit of you, I knew I′ll never, ever, ever be the same<br/>
-			<br/>
-			<strong>credits</strong><br/>
-			<strong>Writer(s):</strong> Noonie Bao, Jacob Ludwig Olofsson, Rami Dawod, Adam King Feeney, Camila Cabello, Sasha Sloan. <strong>Lyrics Source:</strong> <a href="https://www.musixmatch.com/lyrics/51613604/78979552">MusixMatch</a>
-		  </p>
-		</article>
-
-		<aside class="content-sidebar">
-		  <h2>On This Page</h2>
-		  <ul class="toc-list">
-			<li class="toc-item">
-			  <a class="toc-link" href="#section-intro">
-				<span>1. This Month's Introduction.</span>
-				<span>01</span>
-			  </a>
-			</li>
-			<li class="toc-item">
-			  <a class="toc-link" href="#section-cases">
-				<span>2. The DJ's Diary: Dec. 2025.</span>
-				<span>02</span>
-			  </a>
-			</li>
-			<li class="toc-item">
-			  <a class="toc-link" href="#section-process">
-				<span>3. Credits / Collabs.</span>
-				<span>03</span>
-			  </a>
-			</li>
-
-		  </ul>
-
-		  <div class="sidebar-note">
-			Why this is here: Tables of Contents and Index pages are a dying art. When you visit a page, full of text, it's easy to get lost. When you return, it's better if you can go straight to where you were. But you need something to jog your memory. That's where Tables of Contents and Index sections shine. This page is too small for an Index, but a Table of Contents fits in nicely.
-		  </div>
-		</aside>
-	  </section>
-	</main>
-  </div>
-
-	<footer>
-	  <div class="footer-inner">
-		<span>© <span id="year"></span>. This is a DJ-experience®-created, Original Work of Art. <br/>Call DJ "X" ( <a href="tel:510.859.7725">510.859.7725</a> ) and leave a  voicemail of your story for a chance to be featured here.</span>
-		<div class="footer-nav">
-		  <a class="footer-link" href="#top">Page-Top</a>
-		  <a class="footer-link" href="https://djx.vegas/" target="_self" rel="noreferrer"
-			>DJX.vegas</a
-		  >
-		  <a class="footer-link" href="https://michaelwidener.com/portfolio/" target="_self" rel="noreferrer"
-			>Portfolio</a
-		  >
-		</div>
-	  </div>
-	</footer>
-
-	<script>
-	  // Simple, GitHub-safe enhancement: current year in footer.
-	  document.getElementById("year").textContent = new Date().getFullYear();
-	</script>
-</body>
-</html>
+			  <span class="lyrics-section-label">VERSE 1</span><br/>
+			  It's crazy how that four letter word gets tossed<br/>
+			  And I'm guilty, said it so many times before<br/>
+			  But I can't front no more
