@@ -329,11 +329,21 @@
 	  align-items: flex-start;
 	}
 
-	@media (max-width: 900px) {
+@media (max-width: 900px) {
 	  .content-layout {
 		grid-template-columns: minmax(0, 1fr);
 	  }
+	
+	  /* Reorder for mobile: TOC (sidebar) first, article second */
+	  .content-sidebar {
+		order: 1;
+	  }
+	
+	  .content-article {
+		order: 2;
+	  }
 	}
+
 
 	.content-article,
 	.content-sidebar {
